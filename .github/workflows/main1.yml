@@ -1,1 +1,16 @@
-TSAST
+name: 同步fork原仓库  # 工作流名称 (gōng zuò liú míng chéng)
+
+on:
+  schedule:  # 触发器 (chōu fā qì)
+    - cron: "0 0 * * *"  # cron 表达式，每天午夜运行 (cron biǎo dá shì, měi tiān wǔ yè yún xíng)
+
+jobs:
+  sync:  # 任务名称 (rèndàw míng chéng)
+    runs-on: ubuntu-latest  # 指定运行环境 (zhǐ dìng yùn xíng huán jìng)
+
+    steps:  # 执行步骤 (zhí xíng bù zhòu)
+      - uses: actions/checkout@v3  # 使用 checkout action 检查出代码 (shǐ yòng checkout action jiǎn chá chū dài mǎ)
+        # 省略其他配置 (shěng lvè qí tā pèi zhì)
+
+      - name: Add upstream remote  # 添加上游仓库远程指针 (tiān jiā shàngyóu cāng kù yuǎn chéng zhǐ zh针)
+        run: git remote add upstream https://github.com/mr-fuge/test2.git  # 运行 git remote add 命令添加远程指针 (yùn xíng git remote add mìng lìng tiān jiā yuǎn chéng zhǐ zh针)
