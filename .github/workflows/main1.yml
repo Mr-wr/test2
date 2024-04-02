@@ -1,7 +1,7 @@
 name: 同步fork原仓库  # 工作流名称 (gōng zuò liú míng chéng)
 
 on:
-  schedule:  # 触发器1 (chōu fā qì)
+  schedule:  # 触发器 (chōu fā qì)
     - cron: "0 0 * * *"  # cron 表达式，每天午夜运行 (cron biǎo dá shì, měi tiān wǔ yè yún xíng)
 
 jobs:
