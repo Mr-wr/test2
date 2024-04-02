@@ -5,7 +5,7 @@ on:
     - cron: "0 0 * * *"  # cron 表达式，每天午夜运行 (cron biǎo dá shì, měi tiān wǔ yè yún xíng)
 
 jobs:
-  sync:  # 任务名称3(rèndàw míng chéng)
+  sync:  # 任务名称333333(rèndàw míng chéng)
     runs-on: ubuntu-latest  # 指定运行环境 (zhǐ dìng yùn xíng huán jìng)
 
     steps:  # 执行步骤 (zhí xíng bù zhòu)
